@@ -140,7 +140,7 @@ export default function Portfolio() {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               Huzaifa Ramzan
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 mb-6">Public Administration Student | Policy Enthusiast</p>
+            <p className="text-xl md:text-2xl text-gray-400 mb-6">Public Administration Student | Policy Enthusiast | NUST</p>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
               Passionate about creating positive societal impact through effective public policy and governance
             </p>
