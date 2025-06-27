@@ -102,7 +102,7 @@ export default function Portfolio() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pt-4 border-t border-gray-800/50">
+            <div className={`md:hidden mt-4 pt-4 border-t ${darkMode ? "border-gray-800/50 bg-gray-900/95" : "border-gray-300/50 bg-white/95"} rounded-xl shadow-xl`}> 
               <div className="flex flex-col space-y-3">
                 {[
                   { id: "about", label: "About" },
@@ -113,8 +113,14 @@ export default function Portfolio() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`text-sm font-medium transition-colors hover:text-white text-left ${
-                      activeSection === item.id ? "text-white" : "text-gray-400"
+                    className={`text-sm font-medium transition-colors text-left px-2 py-2 rounded-lg ${
+                      activeSection === item.id
+                        ? darkMode
+                          ? "text-white bg-gray-800"
+                          : "text-gray-900 bg-gray-200"
+                        : darkMode
+                        ? "text-gray-300 hover:text-white hover:bg-gray-800"
+                        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
                     }`}
                   >
                     {item.label}
